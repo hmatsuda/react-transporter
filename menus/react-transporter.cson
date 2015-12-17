@@ -1,0 +1,22 @@
+# See https://atom.io/docs/latest/creating-a-package#menus for more details
+'context-menu':
+  'atom-text-editor': [
+    {
+      'label': 'open JSX react-transporter'
+      'command': 'react-transporter:open-jsx'
+    }
+  ]
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'react-transporter'
+      'submenu': [
+        {
+          'label': 'open JSX'
+          'command': 'react-transporter:open-jsx'
+        }
+      ]
+    ]
+  }
+]
