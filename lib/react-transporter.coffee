@@ -20,7 +20,7 @@ module.exports =
   openJSX: ->
     editor = atom.workspace.getActiveTextEditor()
     cursor = editor.getCursors()[0]
-    name = editor.getTextInBufferRange(cursor.getCurrentWordBufferRange())
+    name = editor.getTextInBufferRange(cursor.getCurrentWordBufferRange()).replace(/[<|>]/g, '')
     if name.length > 0
       for projectPath in atom.project.getPaths()
         filePattern = path.join(projectPath, 'app', 'assets', 'javascripts', '**', "#{name}.js.jsx")
